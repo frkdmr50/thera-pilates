@@ -7,147 +7,69 @@
 
 .hero {
   position: relative;
-  min-height: min(760px, calc(100vh - 88px));
-  display: grid;
-  align-items: center;
+  isolation: isolate;
+  height: min(56.28vw, calc(100svh - 88px));
+  min-height: 0;
   overflow: hidden;
-  background: var(--color-brown);
+  background: #d9d3c4;
 }
 
-.hero__media {
+.hero::before {
+  content: "";
   position: absolute;
-  inset: 0;
+  z-index: 0;
+  inset: -24px;
+  background: url("../assets/images/hero/thera-homepage-cover.jpeg") center / cover no-repeat;
+  filter: blur(24px) brightness(0.72) saturate(0.82);
+  transform: scale(1.04);
 }
 
-.hero__media img {
+.hero__image {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
-.hero__overlay {
+.hero__discover {
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg,
-      rgba(48, 48, 44, 0.64) 0%,
-      rgba(48, 48, 44, 0.34) 42%,
-      rgba(48, 48, 44, 0.08) 78%,
-      rgba(48, 48, 44, 0.16) 100%);
+  z-index: 2;
+  left: 50%;
+  top: 89%;
+  width: 18%;
+  height: 13%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.25rem;
 }
 
-.hero__inner {
-  position: relative;
-  z-index: 1;
-  width: min(calc(100% - 48px), var(--container));
-  margin-inline: auto;
-  padding-block: clamp(5rem, 10vw, 9rem);
-}
-
-.hero__content {
-  max-width: 700px;
-  color: var(--color-white);
-}
-
-.hero__eyebrow {
-  margin-bottom: 1.25rem;
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.hero__title {
-  max-width: 650px;
-  margin-bottom: 1.5rem;
-  font-size: clamp(3.7rem, 7vw, 7.25rem);
-  letter-spacing: -0.035em;
-}
-
-.hero__text {
-  max-width: 570px;
-  margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
-}
-
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.hero .button--primary {
-  background: var(--color-white);
-  color: var(--color-brown);
-}
-
-.hero .button--secondary {
-  border-color: rgba(255, 255, 255, 0.7);
-  color: var(--color-white);
-}
-
-.hero__scroll {
-  position: absolute;
-  right: 48px;
-  bottom: 32px;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.hero__scroll-line {
-  width: 48px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.55);
+.hero__discover:focus-visible {
+  outline: 3px solid #263421;
+  outline-offset: 3px;
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: calc(100svh - 72px);
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1672 / 941;
   }
 
-  .hero__media img {
-    object-position: 58% center;
+  .hero__image {
+    object-position: center;
+    object-fit: contain;
   }
 
-  .hero__overlay {
-    background:
-      linear-gradient(180deg,
-        rgba(48, 48, 44, 0.24) 0%,
-        rgba(48, 48, 44, 0.48) 48%,
-        rgba(48, 48, 44, 0.72) 100%);
-  }
-
-  .hero__inner {
-    width: min(calc(100% - 32px), var(--container));
-    padding-block: 5rem 5.5rem;
-  }
-
-  .hero__title {
-    font-size: clamp(3.25rem, 16vw, 5.5rem);
-    line-height: 0.94;
-  }
-
-  .hero__text {
-    font-size: 0.98rem;
-  }
-
-  .hero__actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero__actions .button {
-    width: 100%;
-  }
-
-  .hero__scroll {
+  .hero::before {
     display: none;
+  }
+
+  .hero__discover {
+    width: 36%;
+    height: 44px;
+    top: 87.8%;
   }
 }
 
@@ -162,26 +84,45 @@
 
 .about-intro__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-  gap: clamp(3rem, 8vw, 8rem);
-  align-items: center;
-}
-
-.about-intro__visual {
-  position: relative;
-  min-height: 560px;
-  overflow: hidden;
-}
-
-.about-intro__visual img {
-  width: 100%;
-  height: 100%;
-  min-height: 560px;
-  object-fit: cover;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(3rem, 6vw, 5rem);
 }
 
 .about-intro__content {
-  max-width: 660px;
+  max-width: 850px;
+}
+
+.about-intro__gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.65rem, 1.5vw, 1.25rem);
+}
+
+.about-intro__gallery-item {
+  display: block;
+  min-width: 0;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: var(--color-beige);
+  cursor: zoom-in;
+}
+
+.about-intro__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 650ms ease;
+}
+
+.about-intro__gallery-item:hover img {
+  transform: scale(1.035);
+}
+
+.about-intro__gallery-item:focus-visible {
+  outline: 3px solid var(--color-brown);
+  outline-offset: 3px;
 }
 
 .about-intro__title {
@@ -225,14 +166,8 @@
 }
 
 @media (max-width: 900px) {
-  .about-intro__grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .about-intro__visual,
-  .about-intro__visual img {
-    min-height: 460px;
+  .about-intro__gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .about-intro__content {
@@ -241,9 +176,9 @@
 }
 
 @media (max-width: 600px) {
-  .about-intro__visual,
-  .about-intro__visual img {
-    min-height: 360px;
+  .about-intro__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
   }
 
   .about-intro__title {
@@ -997,15 +932,9 @@
 }
 
 .site-footer__logo {
-  display: inline-block;
-  width: 145px;
-  margin-bottom: 1.2rem;
-  padding: .45rem;
-  background: var(--color-cream);
-}
-
-.site-footer__logo img {
-  width: 100%;
+  margin-bottom: .9rem;
+  padding: 0;
+  background: transparent;
 }
 
 .site-footer__tagline {
@@ -1155,23 +1084,24 @@
   line-height: 1.9;
 }
 
-.about-page__visual {
-  margin-top: clamp(4rem,8vw,8rem);
-  overflow: hidden;
-  background: var(--color-soft-beige);
+.about-page__gallery {
+  margin-top: clamp(4rem, 8vw, 8rem);
 }
 
-.about-page__visual img {
-  width: 100%;
-  max-height: 720px;
-  object-fit: cover;
+.about-page__gallery-heading {
+  margin-bottom: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+.about-page__gallery-heading .about-intro__title {
+  margin: 0;
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
 }
 
 .about-page__principle {
   display: grid;
   grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr);
   gap: clamp(3rem,8vw,8rem);
-  margin-top: clamp(4rem,9vw,9rem);
+  margin-top: clamp(3rem,6vw,5rem);
 }
 
 .about-page__principle-label {
@@ -1653,6 +1583,36 @@
   }
 }
 
+/* Keep founder portraits in a tall, content-bearing column so sticky has
+   room to follow the biography while the profile itself scrolls. */
+@media (min-width: 561px) and (max-width: 800px) {
+  .founders-page__profiles .founder-page-card {
+    display: grid;
+    grid-template-columns: minmax(170px, .72fr) minmax(0, 1.28fr);
+    gap: clamp(1.25rem, 4vw, 2.5rem);
+    align-items: start;
+  }
+
+  .founders-page__profiles .founder-page-card__visual {
+    position: sticky;
+    top: 104px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .founders-page__profiles .founder-page-card__content {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .founders-page__profiles .founder-page-card__visual {
+    position: relative;
+    top: auto;
+  }
+}
+
 /* =========================
    THERA — CONTACT PAGE
    ========================= */
@@ -1966,6 +1926,7 @@
   margin-inline: auto;
   padding: 58px 0;
   border-top: 1px solid var(--color-line, #D9D0C4);
+  scroll-margin-top: 100px;
 }
 .services-page__list .service-detail:first-child {
   border-top: 0;
@@ -1986,6 +1947,151 @@
   .services .service__content,
   .services-page__list .service-detail__content {
     max-width: none;
+  }
+}
+
+/* Founder previews on the homepage: portraits and credentials only. */
+.founders__header {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.founders__teasers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.founder-teaser {
+  min-width: 0;
+  text-align: center;
+}
+
+.founder-teaser__portrait {
+  max-width: 390px;
+  aspect-ratio: 4 / 5;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  background: var(--color-soft-beige);
+}
+
+.founder-teaser__portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+}
+
+.founder-teaser__name {
+  margin: 0 0 .6rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 500;
+}
+
+.founder-teaser__role {
+  max-width: 38ch;
+  margin: 0 auto;
+  color: var(--color-brown);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.founders__action {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Pair supplied portraits with the biographies on the founders page. */
+.founders-page__profiles .founder-page-card {
+  display: grid;
+  grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.founders-page__profiles .founder-page-card--reverse {
+  grid-template-columns: minmax(0, 1.22fr) minmax(260px, .78fr);
+}
+
+.founders-page__profiles .founder-page-card__visual {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+  height: fit-content;
+  width: 100%;
+  max-width: 460px;
+  margin: 0;
+}
+
+.founders-page__profiles .founder-page-card__visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 34%;
+}
+
+.founders-page__profiles .founder-page-card--reverse .founder-page-card__visual {
+  order: 2;
+  margin-left: auto;
+}
+
+.founders-page__profiles .founder-page-card--reverse .founder-page-card__content {
+  order: 1;
+  margin-left: 0;
+}
+
+@media (max-width: 850px) {
+  .founders__teasers {
+    gap: 1.25rem;
+  }
+
+  .founders-page__profiles .founder-page-card,
+  .founders-page__profiles .founder-page-card--reverse {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .founders-page__profiles .founder-page-card__visual,
+  .founders-page__profiles .founder-page-card--reverse .founder-page-card__visual {
+    position: sticky;
+    top: 104px;
+    order: 0;
+    max-width: 520px;
+    margin: 0;
+  }
+
+  .founders-page__profiles .founder-page-card__content,
+  .founders-page__profiles .founder-page-card--reverse .founder-page-card__content {
+    order: 1;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .founders-page__profiles .founder-page-card__visual,
+  .founders-page__profiles .founder-page-card--reverse .founder-page-card__visual {
+    top: 88px;
+  }
+}
+
+@media (max-width: 560px) {
+  .founders__teasers {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .founder-teaser__portrait {
+    width: min(100%, 360px);
   }
 }
 
@@ -2261,5 +2367,332 @@
   .studio-showcase__intro {
     max-width: 100%;
     margin-top: 1.35rem;
+  }
+}
+
+
+/* Homepage services: image-led cards inspired by the supplied design reference. */
+.services__header {
+  max-width: 800px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.services__header .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.services__title {
+  margin-bottom: .85rem;
+  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
+  letter-spacing: -.035em;
+}
+
+.services__intro {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.services__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(.8rem, 1.5vw, 1.25rem);
+  align-items: stretch;
+}
+
+.services__image-note {
+  margin: 1rem 0 0;
+  color: rgba(48, 48, 44, .58);
+  font-size: .76rem;
+  text-align: right;
+}
+
+.service-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  background: rgba(255, 255, 255, .58);
+}
+
+.service-card__media {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--color-soft-beige);
+}
+
+.service-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 650ms ease;
+}
+
+.service-card__media:hover img,
+.service-card__media:focus-visible img {
+  transform: scale(1.035);
+}
+
+.service-card__media:focus-visible,
+.service-card__link:focus-visible {
+  outline: 3px solid var(--color-brown);
+  outline-offset: 3px;
+}
+
+.service-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(1.15rem, 2vw, 1.8rem) clamp(.85rem, 1.5vw, 1.4rem) clamp(1.4rem, 2.3vw, 2rem);
+  text-align: center;
+}
+
+.service-card__number {
+  color: var(--color-brown);
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+}
+
+.service-card__title {
+  margin: .7rem 0 .75rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 1.8vw, 1.85rem);
+  line-height: 1.15;
+}
+
+.service-card__text {
+  margin: 0 0 1.2rem;
+  color: rgba(48, 48, 44, .76);
+  font-size: .88rem;
+  line-height: 1.7;
+}
+
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin-top: auto;
+  color: var(--color-ink, #30302c);
+  font-size: .86rem;
+  text-decoration: none;
+}
+
+.service-card__link span {
+  font-size: 1.2rem;
+  transition: transform 180ms ease;
+}
+
+.service-card__link:hover span {
+  transform: translateX(4px);
+}
+
+.services .services__cta {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+@media (max-width: 900px) {
+  .services__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .services__image-note {
+    text-align: left;
+  }
+
+  .services__cards {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-card__media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .service-card__body {
+    padding: 1.25rem 1.2rem 1.5rem;
+  }
+}
+
+/* Homepage studio introduction: keep the photo gallery on the studio page. */
+.studio-showcase__header {
+  display: block;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.studio-showcase__heading {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.studio-showcase__intro {
+  margin: 1rem auto 0;
+}
+
+.studio-showcase__footer {
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* User supplied studio photos are 3:4 originals; display them without cropping. */
+.studio-page__gallery {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: auto;
+  gap: clamp(.65rem, 1.4vw, 1.1rem);
+  padding-top: 0;
+}
+
+.studio-page__item,
+.studio-page__item--large,
+.studio-page__item--wide {
+  grid-column: auto;
+  grid-row: auto;
+  aspect-ratio: 3 / 4;
+  min-height: 0;
+}
+
+.studio-page__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none;
+}
+
+.studio-page__item:hover img {
+  filter: none;
+}
+
+@media (max-width: 900px) {
+  .studio-page__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .studio-page__gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* THERA official documents */
+.documents-showcase {
+  background: var(--color-cream);
+  border-block: 1px solid rgba(112, 90, 77, .12);
+}
+
+.documents-showcase__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1060px;
+  margin-inline: auto;
+}
+
+.documents-showcase__content {
+  max-width: 680px;
+}
+
+.documents-showcase__title {
+  margin: 0 0 .8rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.documents-showcase__text {
+  margin: 0;
+  color: rgba(48, 48, 44, .76);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.documents-showcase__button {
+  flex: 0 0 auto;
+}
+
+.documents-page__hero {
+  padding-block: clamp(6rem, 12vw, 10rem) clamp(4rem, 7vw, 6rem);
+  background: var(--color-cream);
+  border-bottom: 1px solid rgba(112, 90, 77, .12);
+}
+
+.documents-page__title {
+  max-width: 900px;
+  margin: 0 0 clamp(1.4rem, 2.2vw, 2rem);
+  font-size: clamp(3.4rem, 6vw, 6.2rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -.018em;
+}
+
+.documents-page__intro {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(1.05rem, 1.55vw, 1.28rem);
+  line-height: 1.75;
+  color: var(--type-ink, #111111);
+}
+
+.documents-page__gallery {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.documents-page__card {
+  min-width: 0;
+}
+
+.documents-page__card-title {
+  margin: 0 0 1rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  font-weight: 500;
+}
+
+.documents-page__image-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(112, 90, 77, .16);
+  background: #fff;
+  cursor: zoom-in;
+  box-shadow: 0 14px 42px rgba(48, 48, 44, .08);
+}
+
+.documents-page__image-button:focus-visible {
+  outline: 3px solid var(--color-brown);
+  outline-offset: 4px;
+}
+
+.documents-page__image-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .documents-showcase__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .documents-page__gallery {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }

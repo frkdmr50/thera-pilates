@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!items.length || !lightbox || !image || !close || !prev || !next || !counter) return;
 
   let currentIndex = 0;
+  let activeTrigger = null;
 
   const render = (index) => {
     currentIndex = (index + items.length) % items.length;
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const open = (item) => {
+    activeTrigger = item;
     currentIndex = items.indexOf(item);
     render(currentIndex);
     lightbox.classList.add("is-open");
@@ -33,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     lightbox.setAttribute("aria-hidden", "true");
     image.src = "";
     document.body.style.overflow = "";
+    activeTrigger?.focus();
+    activeTrigger = null;
   };
 
   const showPrevious = () => render(currentIndex - 1);

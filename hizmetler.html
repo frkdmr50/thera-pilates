@@ -24,7 +24,10 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="THERA Pilates Stüdyosu ana sayfa">
-      <img src="assets/images/logo/thera-logo.png" alt="THERA Pilates Stüdyosu">
+      <span class="site-wordmark" aria-hidden="true">
+        <span class="site-wordmark__top">THERA</span>
+        <span class="site-wordmark__bottom">PILATES</span>
+      </span>
     </a>
     <nav class="site-nav" id="primary-navigation" aria-label="Ana navigasyon">
       <a class="site-nav__link" href="index.html">Ana Sayfa</a>
@@ -32,7 +35,11 @@
       <a class="site-nav__link" href="hizmetler.html" aria-current="page">Hizmetler</a>
       <a class="site-nav__link" href="kurucular.html">Kurucular</a>
       <a class="site-nav__link" href="studyomuz.html">Stüdyomuz</a>
+      <a class="site-nav__link" href="belgelerimiz.html">Belgelerimiz</a>
       <a class="site-nav__link" href="iletisim.html">İletişim</a>
+      <a class="site-nav__instagram" href="https://www.instagram.com/therapilatesmugla/" target="_blank" rel="noopener noreferrer" aria-label="THERA Pilates Instagram hesabı (yeni sekmede açılır)" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="site-nav__instagram-dot" cx="17.5" cy="6.5" r="1"></circle></svg>
+      </a>
     </nav>
     <a class="button button--primary site-header__cta" href="iletisim.html">Bize Ulaşın</a>
     <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-controls="primary-navigation" aria-expanded="false">
@@ -56,7 +63,7 @@
   <section class="services-page__list">
     <div class="container">
 
-      <article class="service-detail"><div class="service-detail__content">
+      <article class="service-detail" id="reformer-pilates"><div class="service-detail__content">
           <span class="service-detail__number">01 / REFORMER</span>
           <h2 class="service-detail__title">Reformer Pilates</h2>
           <p class="service-detail__text">
@@ -69,7 +76,7 @@
         </div>
       </article>
 
-      <article class="service-detail service-detail--reverse"><div class="service-detail__content">
+      <article class="service-detail service-detail--reverse" id="hamile-pilatesi"><div class="service-detail__content">
           <span class="service-detail__number">02 / HAMİLE PİLATESİ</span>
           <h2 class="service-detail__title">Hamile Pilatesi</h2>
           <p class="service-detail__text">
@@ -83,7 +90,7 @@
         </div>
       </article>
 
-      <article class="service-detail"><div class="service-detail__content">
+      <article class="service-detail" id="barrel"><div class="service-detail__content">
           <span class="service-detail__number">03 / BARREL</span>
           <h2 class="service-detail__title">Barrel</h2>
           <p class="service-detail__text">
@@ -96,7 +103,7 @@
         </div>
       </article>
 
-      <article class="service-detail service-detail--reverse"><div class="service-detail__content">
+      <article class="service-detail service-detail--reverse" id="yoga"><div class="service-detail__content">
           <span class="service-detail__number">04 / YOGA</span>
           <h2 class="service-detail__title">Yoga</h2>
           <p class="service-detail__text">
@@ -128,7 +135,10 @@
     <div class="site-footer__main">
       <div>
         <a class="site-footer__logo" href="index.html" aria-label="THERA Pilates Stüdyosu ana sayfa">
-          <img src="assets/images/logo/thera-logo.png" alt="THERA Pilates Stüdyosu">
+          <span class="site-wordmark" aria-hidden="true">
+            <span class="site-wordmark__top">THERA</span>
+            <span class="site-wordmark__bottom">PILATES</span>
+          </span>
         </a>
         <p class="site-footer__tagline">
           Bedenini tanı. Hareketini keşfet.
@@ -143,6 +153,7 @@
           <a class="site-footer__link" href="hizmetler.html" aria-current="page">Hizmetler</a>
           <a class="site-footer__link" href="kurucular.html">Kurucular</a>
           <a class="site-footer__link" href="studyomuz.html">Stüdyomuz</a>
+          <a class="site-footer__link" href="belgelerimiz.html">Belgelerimiz</a>
           <a class="site-footer__link" href="iletisim.html">İletişim</a>
         </nav>
       </div>
@@ -153,7 +164,11 @@
           <a class="site-footer__link" href="tel:+905059183603">0505 918 36 03</a>
           <a class="site-footer__link" href="tel:+905558681795">0555 868 17 95</a>
           <span>Emir Beyazıt Mahallesi, 28. Sokak,<br>Muğla Life AVM, A Blok No: 6</span>
-          <span>08.30–22.00</span>
+          <div class="site-footer__hours" aria-label="Çalışma saatleri">
+            <span><strong>Hafta içi:</strong> 08.30–22.00</span>
+            <span><strong>Cumartesi:</strong> 09.00–15.00</span>
+            <span><strong>Pazar:</strong> Kapalı</span>
+          </div>
           <a class="site-footer__link" href="https://www.instagram.com/therapilatesmugla/" target="_blank" rel="noopener noreferrer">@therapilatesmugla</a>
         </div>
       </div>

@@ -26,7 +26,10 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="THERA Pilates Stüdyosu ana sayfa">
-      <img src="assets/images/logo/thera-logo.png" alt="THERA Pilates Stüdyosu">
+      <span class="site-wordmark" aria-hidden="true">
+        <span class="site-wordmark__top">THERA</span>
+        <span class="site-wordmark__bottom">PILATES</span>
+      </span>
     </a>
     <nav class="site-nav" id="primary-navigation" aria-label="Ana navigasyon">
       <a class="site-nav__link" href="index.html">Ana Sayfa</a>
@@ -34,7 +37,11 @@
       <a class="site-nav__link" href="hizmetler.html">Hizmetler</a>
       <a class="site-nav__link" href="kurucular.html">Kurucular</a>
       <a class="site-nav__link" href="studyomuz.html">Stüdyomuz</a>
+      <a class="site-nav__link" href="belgelerimiz.html">Belgelerimiz</a>
       <a class="site-nav__link" href="iletisim.html">İletişim</a>
+      <a class="site-nav__instagram" href="https://www.instagram.com/therapilatesmugla/" target="_blank" rel="noopener noreferrer" aria-label="THERA Pilates Instagram hesabı (yeni sekmede açılır)" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="site-nav__instagram-dot" cx="17.5" cy="6.5" r="1"></circle></svg>
+      </a>
     </nav>
     <a class="button button--primary site-header__cta" href="iletisim.html">Bize Ulaşın</a>
     <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-controls="primary-navigation" aria-expanded="false">
@@ -84,10 +91,37 @@
       </div>
     </div>
 
-    <div class="container about-page__visual">
-      <img src="assets/images/studio/studio-interior.webp"
-           alt="THERA Pilates Stüdyosu iç mekânı"
-           loading="lazy">
+    <div class="container about-page__gallery">
+      <div class="about-page__gallery-heading">
+        <p class="eyebrow">THERA PILATES STÜDYOSU</p>
+        <h2 class="about-intro__title">Thera’yı tanıyın.</h2>
+      </div>
+      <div class="about-intro__gallery" data-gallery role="group" aria-label="THERA Pilates stüdyo fotoğrafları">
+        <button class="about-intro__gallery-item" type="button" data-gallery-item data-full="assets/images/about/thera-gallery-01.jpeg" aria-label="THERA stüdyo fotoğrafı 1: reformer ekipmanı ve manzara">
+          <img src="assets/images/about/thera-gallery-01.jpeg" alt="THERA stüdyosunda reformer ekipmanı ve manzara" loading="lazy" decoding="async">
+        </button>
+        <button class="about-intro__gallery-item" type="button" data-gallery-item data-full="assets/images/about/thera-gallery-02.jpeg" aria-label="THERA stüdyo fotoğrafı 2: duvar logosu">
+          <img src="assets/images/about/thera-gallery-02.jpeg" alt="THERA Pilates Stüdyosu duvar logosu" loading="lazy" decoding="async">
+        </button>
+        <button class="about-intro__gallery-item" type="button" data-gallery-item data-full="assets/images/about/thera-gallery-03.jpeg" aria-label="THERA stüdyo fotoğrafı 3: reformer alanı">
+          <img src="assets/images/about/thera-gallery-03.jpeg" alt="Reformer ekipmanlarıyla THERA stüdyo alanı" loading="lazy" decoding="async">
+        </button>
+        <button class="about-intro__gallery-item" type="button" data-gallery-item data-full="assets/images/about/thera-gallery-04.jpeg" aria-label="THERA stüdyo fotoğrafı 4: geniş stüdyo görünümü">
+          <img src="assets/images/about/thera-gallery-04.jpeg" alt="THERA Pilates stüdyosunun geniş görünümü" loading="lazy" decoding="async">
+        </button>
+        <button class="about-intro__gallery-item" type="button" data-gallery-item data-full="assets/images/about/thera-gallery-05.jpeg" aria-label="THERA stüdyo fotoğrafı 5: dinlenme alanı">
+          <img src="assets/images/about/thera-gallery-05.jpeg" alt="THERA stüdyosundaki dinlenme alanı" loading="lazy" decoding="async">
+        </button>
+        <button class="about-intro__gallery-item" type="button" data-gallery-item data-full="assets/images/about/thera-gallery-06.jpeg" aria-label="THERA stüdyo fotoğrafı 6: reformer ekipmanları">
+          <img src="assets/images/about/thera-gallery-06.jpeg" alt="THERA logosu ve reformer ekipmanları" loading="lazy" decoding="async">
+        </button>
+        <button class="about-intro__gallery-item" type="button" data-gallery-item data-full="assets/images/about/thera-gallery-07.jpeg" aria-label="THERA stüdyo fotoğrafı 7: kişisel dolaplar">
+          <img src="assets/images/about/thera-gallery-07.jpeg" alt="THERA stüdyosundaki kişisel dolaplar" loading="lazy" decoding="async">
+        </button>
+        <button class="about-intro__gallery-item" type="button" data-gallery-item data-full="assets/images/about/thera-gallery-09.jpeg" aria-label="THERA stüdyo fotoğrafı 8: iç mekân ve ayna yansıması">
+          <img src="assets/images/about/thera-gallery-09.jpeg" alt="THERA stüdyosunun iç mekânı ve ayna yansıması" loading="lazy" decoding="async">
+        </button>
+      </div>
     </div>
 
     <div class="container about-page__principle">
@@ -131,7 +165,10 @@
     <div class="site-footer__main">
       <div>
         <a class="site-footer__logo" href="index.html" aria-label="THERA Pilates Stüdyosu ana sayfa">
-          <img src="assets/images/logo/thera-logo.png" alt="THERA Pilates Stüdyosu">
+          <span class="site-wordmark" aria-hidden="true">
+            <span class="site-wordmark__top">THERA</span>
+            <span class="site-wordmark__bottom">PILATES</span>
+          </span>
         </a>
         <p class="site-footer__tagline">
           Bedenini tanı. Hareketini keşfet.
@@ -146,6 +183,7 @@
           <a class="site-footer__link" href="hizmetler.html">Hizmetler</a>
           <a class="site-footer__link" href="kurucular.html">Kurucular</a>
           <a class="site-footer__link" href="studyomuz.html">Stüdyomuz</a>
+          <a class="site-footer__link" href="belgelerimiz.html">Belgelerimiz</a>
           <a class="site-footer__link" href="iletisim.html">İletişim</a>
         </nav>
       </div>
@@ -156,7 +194,11 @@
           <a class="site-footer__link" href="tel:+905059183603">0505 918 36 03</a>
           <a class="site-footer__link" href="tel:+905558681795">0555 868 17 95</a>
           <span>Emir Beyazıt Mahallesi, 28. Sokak,<br>Muğla Life AVM, A Blok No: 6</span>
-          <span>08.30–22.00</span>
+          <div class="site-footer__hours" aria-label="Çalışma saatleri">
+            <span><strong>Hafta içi:</strong> 08.30–22.00</span>
+            <span><strong>Cumartesi:</strong> 09.00–15.00</span>
+            <span><strong>Pazar:</strong> Kapalı</span>
+          </div>
           <a class="site-footer__link" href="https://www.instagram.com/therapilatesmugla/" target="_blank" rel="noopener noreferrer">@therapilatesmugla</a>
         </div>
       </div>
@@ -169,6 +211,14 @@
 
   </div>
 </footer>
+
+<div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="THERA stüdyo fotoğrafı" aria-hidden="true">
+  <button class="gallery-lightbox__close" type="button" aria-label="Görseli kapat">×</button>
+  <button class="gallery-lightbox__nav gallery-lightbox__nav--prev" type="button" aria-label="Önceki görsel">‹</button>
+  <img class="gallery-lightbox__image" src="" alt="">
+  <button class="gallery-lightbox__nav gallery-lightbox__nav--next" type="button" aria-label="Sonraki görsel">›</button>
+  <span class="gallery-lightbox__counter" aria-live="polite"></span>
+</div>
 
 <script src="js/main.js" defer></script>
 <script src="js/navigation.js" defer></script>

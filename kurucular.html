@@ -24,7 +24,10 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="THERA Pilates Stüdyosu ana sayfa">
-      <img src="assets/images/logo/thera-logo.png" alt="THERA Pilates Stüdyosu">
+      <span class="site-wordmark" aria-hidden="true">
+        <span class="site-wordmark__top">THERA</span>
+        <span class="site-wordmark__bottom">PILATES</span>
+      </span>
     </a>
     <nav class="site-nav" id="primary-navigation" aria-label="Ana navigasyon">
       <a class="site-nav__link" href="index.html">Ana Sayfa</a>
@@ -32,7 +35,11 @@
       <a class="site-nav__link" href="hizmetler.html">Hizmetler</a>
       <a class="site-nav__link" href="kurucular.html" aria-current="page">Kurucular</a>
       <a class="site-nav__link" href="studyomuz.html">Stüdyomuz</a>
+      <a class="site-nav__link" href="belgelerimiz.html">Belgelerimiz</a>
       <a class="site-nav__link" href="iletisim.html">İletişim</a>
+      <a class="site-nav__instagram" href="https://www.instagram.com/therapilatesmugla/" target="_blank" rel="noopener noreferrer" aria-label="THERA Pilates Instagram hesabı (yeni sekmede açılır)" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="site-nav__instagram-dot" cx="17.5" cy="6.5" r="1"></circle></svg>
+      </a>
     </nav>
     <a class="button button--primary site-header__cta" href="iletisim.html">Bize Ulaşın</a>
     <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-controls="primary-navigation" aria-expanded="false">
@@ -52,115 +59,64 @@
     </div>
   </section>
 
-  <section class="founders-page__profiles">
+  <section class="founders-page__profiles" aria-label="THERA kurucularının özgeçmişleri">
     <div class="container">
-
-      <article class="founder-page-card">
-<div class="founder-page-card__content">
-          <p class="founder-page-card__role">Kurucu · Pilates Eğitmeni</p>
-          <h2 class="founder-page-card__name">Mihriban Doğaroğlu</h2>
-
+      <article class="founder-page-card" aria-labelledby="mihriban-name">
+        <div class="founder-page-card__visual">
+          <img src="assets/images/founders/mihriban-dogaroglu.jpeg" alt="THERA kurucusu Mihriban Doğaroğlu" fetchpriority="high" decoding="async">
+        </div>
+        <div class="founder-page-card__content">
+          <p class="founder-page-card__role">TCF 2. Kademe Pilates Eğitmeni · 3. Kademe Yüzme Antrenörü</p>
+          <h2 class="founder-page-card__name" id="mihriban-name">Mihriban Doğaroğlu</h2>
           <div class="founder-page-card__story">
             <div>
-              <h3>Sporla başlayan yolculuk</h3>
-              <p>
-                1985 yılında İzmir Karşıyaka’da doğdum. Muğla Sıtkı Koçman
-                Üniversitesi Spor Bilimleri Fakültesi Antrenörlük Eğitimi
-                Bölümü’nden 3. Kademe Yüzme Antrenörü olarak mezun oldum.
-                Sporla iç içe geçen eğitim ve meslek hayatım boyunca voleybol,
-                yüzme ve kitesurf gibi farklı branşlarda lisanslı sporcu olarak
-                yer aldım.
-              </p>
+              <h3>Eğitim ve spor geçmişi</h3>
+              <p>1985 yılında İzmir Karşıyaka’da doğdum. Sporla olan bağım erken yaşlarda başladı ve zaman içinde eğitimim ile mesleki deneyimlerim doğrultusunda profesyonel bir alana dönüştü.</p>
+              <p>2008 yılında Muğla Sıtkı Koçman Üniversitesi Spor Bilimleri Fakültesi Antrenörlük Eğitimi Bölümü’nden mezun oldum. Hemen ardından, Pilates egzersizleri üzerine akademik çalışmalar yürüttüğüm Sağlık Bilimleri Enstitüsü Beden Eğitimi ve Spor Anabilim Dalı’nda yüksek lisans programını tamamladım.</p>
             </div>
-
             <div>
-              <h3>Pilates ile tanışma</h3>
-              <p>
-                Muğla Sıtkı Koçman Üniversitesi Beden Eğitimi ve Spor
-                Anabilim Dalı’nda yüksek lisans eğitimim sırasında Pilates
-                egzersizleri üzerine akademik çalışmalar yaptım.
-                Pilates, bu dönemde hayatıma yalnızca bir egzersiz sistemi
-                olarak değil, hareketi ve bedeni farklı bir bakış açısıyla
-                ele almamı sağlayan bir disiplin olarak girdi. Aldığım
-                eğitimlerin ardından Pilates’i işletmeciliğini yaptığım
-                spor salonuna dahil ettim.
-              </p>
+              <h3>Mesleki deneyim ve Pilates yaklaşımı</h3>
+              <p>Antrenörlük hayatım boyunca Akyaka ve Muğla’daki işletmelerimde farklı yaş ve seviyelerdeki sporcular ve üyelerle çalıştım. Hareket, performans, beden farkındalığı ve doğru egzersiz yaklaşımı konusunda kapsamlı deneyim edindim.</p>
+              <p>Spor bilimleri ve antrenörlük alanındaki bilgi ve deneyimimi Pilates yaklaşımıyla birleştiriyorum. Pilates’i; hareket kalitesini, beden farkındalığını, kuvveti ve dengeyi geliştiren bütünsel bir çalışma sistemi olarak ele alıyorum.</p>
+              <p>Her bireyin fiziksel özelliklerinin, geçmişinin ve ihtiyaçlarının farklı olduğuna inanıyor; egzersizin kişinin hedeflerine ve kapasitesine göre planlanması gerektiğini düşünüyorum.</p>
             </div>
-
             <div>
-              <h3>2010’dan bugüne</h3>
-              <p>
-                2010 yılından bu yana Akyaka ve Muğla’da Pilates eğitmenliği
-                ve stüdyo işletmeciliği yapıyorum. Yıllar içinde farklı yaş,
-                fiziksel özellik ve ihtiyaçlara sahip birçok kişiyle çalışma
-                fırsatı buldum. Bu deneyim, bana her bedenin aynı egzersiz
-                programına ihtiyaç duymadığını ve iyi bir çalışmanın öncelikle
-                kişiyi doğru anlamaktan geçtiğini öğretti.
-              </p>
-            </div>
-
-            <div>
-              <h3>THERA’nın kuruluşu</h3>
-              <p>
-                2022 yılında Fizyoterapist Damla Koca ile birlikte Thera
-                Pilates Stüdyosu’nu kurduk.
-              </p>
+              <h3>THERA</h3>
+              <p>2022 yılında ortağım Damla Koca ile birlikte THERA Pilates Stüdyosu’nu kurduk. Kuruluşumuzdan bu yana THERA’da aktif olarak çalışıyorum.</p>
+              <p>THERA’yı oluştururken hedefimiz; spor bilimleri, fizyoterapi ve Pilates disiplinlerinin güçlü yönlerini bir araya getirerek kişilerin kendilerini daha iyi tanıdığı, doğru hareket etmeyi öğrendiği ve egzersizi yaşamlarının sürdürülebilir bir parçası hâline getirdiği bir alan yaratmaktı. Katıldığımız eğitim ve seminerlerle kendimizi geliştirmeye, bizi tercih eden üyelerimize fayda sağlamaya devam ediyoruz. İşimizi çok seviyoruz.</p>
             </div>
           </div>
         </div>
       </article>
 
-      <article class="founder-page-card founder-page-card--reverse">
-<div class="founder-page-card__content">
-          <p class="founder-page-card__role">Kurucu · Fizyoterapist</p>
-          <h2 class="founder-page-card__name">Damla Koca</h2>
-
+      <article class="founder-page-card founder-page-card--reverse" aria-labelledby="damla-name">
+        <div class="founder-page-card__visual">
+          <img src="assets/images/founders/damla-koca.jpeg" alt="THERA kurucusu ve fizyoterapist Damla Koca" loading="lazy" decoding="async">
+        </div>
+        <div class="founder-page-card__content">
+          <p class="founder-page-card__role">Fizyoterapist · TCF 2. Kademe Pilates Eğitmeni</p>
+          <h2 class="founder-page-card__name" id="damla-name">Damla Koca</h2>
           <div class="founder-page-card__story">
             <div>
               <h3>Eğitim</h3>
-              <p>
-                1995 yılında Muğla’da doğdum. Lise eğitimimi Muğla Anadolu
-                Lisesi’nde tamamladım. 2013–2017 yılları arasında İstanbul
-                Bilim Üniversitesi Fizik Tedavi ve Rehabilitasyon Bölümü’nde
-                eğitim aldım.
-              </p>
+              <p>1995 yılında Muğla’da doğdum. Lise eğitimimi Muğla Anadolu Lisesi’nde tamamladım. 2013–2017 yılları arasında İstanbul Bilim Üniversitesi Fizik Tedavi ve Rehabilitasyon Bölümü’nde eğitim aldım.</p>
             </div>
-
             <div>
               <h3>Mesleki deneyim</h3>
-              <p>
-                Mesleki hayatım boyunca spor rehabilitasyonu, pediatrik
-                rehabilitasyon, ortopedik rehabilitasyon ve nörolojik
-                rehabilitasyon alanlarında farklı çalışma deneyimleri edindim.
-              </p>
+              <p>Meslek hayatım boyunca spor, pediatrik, ortopedik ve nörolojik rehabilitasyon alanlarında farklı çalışma deneyimleri edindim.</p>
             </div>
-
             <div>
               <h3>Pilates ve fizyoterapi</h3>
-              <p>
-                Fizyoterapi alanındaki bilgi ve deneyimimi Pilates yaklaşımıyla
-                birleştirerek hareketin yalnızca fiziksel performans açısından
-                değil, kişinin günlük yaşam kalitesi açısından da ele alınması
-                gerektiğine inanıyorum.
-              </p>
+              <p>Fizyoterapi alanındaki bilgi ve deneyimimi Pilates yaklaşımıyla birleştiriyorum. Hareketin yalnızca fiziksel performans açısından değil, kişinin günlük yaşam kalitesi bakımından da ele alınması gerektiğine inanıyorum.</p>
             </div>
-
             <div>
               <h3>THERA</h3>
-              <p>
-                2022 yılında Mihriban Doğaroğlu ile birlikte Thera Pilates
-                Stüdyosu’nu kurduk. Kuruluşumuzdan bu yana stüdyomuzda
-                fizyoterapist olarak aktif şekilde görev almaya devam ediyorum.
-                Thera’daki yaklaşımımız; kişinin fiziksel ihtiyaçlarını doğru
-                değerlendirmek, hareket kalitesini geliştirmek ve Pilates’i
-                fizyoterapi perspektifiyle birleştirerek kişiye uygun, güvenli
-                ve bilimsel temelli bir egzersiz deneyimi sunmak.
-              </p>
+              <p>2022 yılında Mihriban Doğaroğlu ile birlikte THERA Pilates Stüdyosu’nu kurduk. Kuruluşumuzdan bu yana stüdyomuzda fizyoterapist olarak aktif şekilde görev alıyorum.</p>
+              <p>THERA’daki yaklaşımımız; kişinin fiziksel ihtiyaçlarını doğru değerlendirmek, hareket kalitesini geliştirmek ve Pilates’i fizyoterapi perspektifiyle birleştirerek kişiye uygun, güvenli ve bilimsel temelli bir egzersiz deneyimi sunmaya dayanıyor.</p>
             </div>
           </div>
         </div>
       </article>
-
     </div>
   </section>
 
@@ -185,7 +141,10 @@
     <div class="site-footer__main">
       <div>
         <a class="site-footer__logo" href="index.html" aria-label="THERA Pilates Stüdyosu ana sayfa">
-          <img src="assets/images/logo/thera-logo.png" alt="THERA Pilates Stüdyosu">
+          <span class="site-wordmark" aria-hidden="true">
+            <span class="site-wordmark__top">THERA</span>
+            <span class="site-wordmark__bottom">PILATES</span>
+          </span>
         </a>
         <p class="site-footer__tagline">
           Bedenini tanı. Hareketini keşfet.
@@ -200,6 +159,7 @@
           <a class="site-footer__link" href="hizmetler.html">Hizmetler</a>
           <a class="site-footer__link" href="kurucular.html" aria-current="page">Kurucular</a>
           <a class="site-footer__link" href="studyomuz.html">Stüdyomuz</a>
+          <a class="site-footer__link" href="belgelerimiz.html">Belgelerimiz</a>
           <a class="site-footer__link" href="iletisim.html">İletişim</a>
         </nav>
       </div>
@@ -210,7 +170,11 @@
           <a class="site-footer__link" href="tel:+905059183603">0505 918 36 03</a>
           <a class="site-footer__link" href="tel:+905558681795">0555 868 17 95</a>
           <span>Emir Beyazıt Mahallesi, 28. Sokak,<br>Muğla Life AVM, A Blok No: 6</span>
-          <span>08.30–22.00</span>
+          <div class="site-footer__hours" aria-label="Çalışma saatleri">
+            <span><strong>Hafta içi:</strong> 08.30–22.00</span>
+            <span><strong>Cumartesi:</strong> 09.00–15.00</span>
+            <span><strong>Pazar:</strong> Kapalı</span>
+          </div>
           <a class="site-footer__link" href="https://www.instagram.com/therapilatesmugla/" target="_blank" rel="noopener noreferrer">@therapilatesmugla</a>
         </div>
       </div>

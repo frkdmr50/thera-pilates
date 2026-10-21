@@ -1,1 +1,110 @@
 @media(max-width:768px){.container{width:min(calc(100% - 32px),var(--container))}.section{padding-block:4.5rem}}
+/* Founders: keep the portrait beside its biography so sticky has a tall
+   containing block to travel through. In a single-column mobile layout,
+   sticky is constrained to the image row and appears not to work. */
+@media (min-width: 561px) {
+  .founders-page__profiles .founder-page-card,
+  .founders-page__profiles .founder-page-card.founder-page-card--reverse {
+    display: grid;
+    grid-template-columns: minmax(190px, .72fr) minmax(0, 1.28fr);
+    gap: clamp(1.25rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  .founders-page__profiles .founder-page-card.founder-page-card--reverse {
+    grid-template-columns: minmax(0, 1.28fr) minmax(190px, .72fr);
+  }
+
+  .founders-page__profiles .founder-page-card.founder-page-card--reverse .founder-page-card__visual {
+    order: 2;
+  }
+
+  .founders-page__profiles .founder-page-card.founder-page-card--reverse .founder-page-card__content {
+    order: 1;
+  }
+
+  .founders-page__profiles .founder-page-card__visual,
+  .founders-page__profiles .founder-page-card.founder-page-card--reverse .founder-page-card__visual {
+    position: sticky;
+    top: 88px;
+    align-self: start;
+    width: 100%;
+    max-width: 460px;
+    margin: 0;
+  }
+
+  .founders-page__profiles .founder-page-card__content,
+  .founders-page__profiles .founder-page-card.founder-page-card--reverse .founder-page-card__content {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .founders-page__profiles .founder-page-card__visual img {
+    height: min(575px, calc(100vh - 112px));
+    height: min(575px, calc(100svh - 112px));
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 560px) {
+  .founders-page__profiles .founder-page-card__visual {
+    position: relative;
+    top: auto;
+  }
+}
+
+/* Homepage-wide rhythm: clear section breaks without oversized blank bands. */
+.home-page > .section {
+  padding-block: clamp(3rem, 5vw, 4.5rem);
+}
+
+/* Keep the intro-to-services transition slightly tighter and intentional. */
+.home-page > .about-intro.section {
+  padding-bottom: clamp(2.75rem, 4.5vw, 4rem);
+}
+
+.home-page > .services.section {
+  padding-top: clamp(2.75rem, 4.5vw, 4rem);
+}
+
+.home-page .approach__header {
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.home-page .approach__quote {
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+}
+
+.home-page .services .services__cta {
+  padding-top: clamp(2.5rem, 4vw, 4rem);
+}
+
+@media (max-width: 850px) {
+  .home-page .contact-cta__grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-page > .section {
+    padding-block: 3rem;
+  }
+
+  .home-page > .about-intro.section {
+    padding-bottom: 2.5rem;
+  }
+
+  .home-page > .services.section {
+    padding-top: 2.5rem;
+  }
+
+  .home-page .approach__header {
+    margin-bottom: 2rem;
+  }
+
+  .home-page .approach__quote {
+    margin-top: 2.75rem;
+  }
+}

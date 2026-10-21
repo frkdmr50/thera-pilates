@@ -24,7 +24,10 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="THERA Pilates Stüdyosu ana sayfa">
-      <img src="assets/images/logo/thera-logo.png" alt="THERA Pilates Stüdyosu">
+      <span class="site-wordmark" aria-hidden="true">
+        <span class="site-wordmark__top">THERA</span>
+        <span class="site-wordmark__bottom">PILATES</span>
+      </span>
     </a>
     <nav class="site-nav" id="primary-navigation" aria-label="Ana navigasyon">
       <a class="site-nav__link" href="index.html">Ana Sayfa</a>
@@ -32,7 +35,11 @@
       <a class="site-nav__link" href="hizmetler.html">Hizmetler</a>
       <a class="site-nav__link" href="kurucular.html">Kurucular</a>
       <a class="site-nav__link" href="studyomuz.html" aria-current="page">Stüdyomuz</a>
+      <a class="site-nav__link" href="belgelerimiz.html">Belgelerimiz</a>
       <a class="site-nav__link" href="iletisim.html">İletişim</a>
+      <a class="site-nav__instagram" href="https://www.instagram.com/therapilatesmugla/" target="_blank" rel="noopener noreferrer" aria-label="THERA Pilates Instagram hesabı (yeni sekmede açılır)" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="site-nav__instagram-dot" cx="17.5" cy="6.5" r="1"></circle></svg>
+      </a>
     </nav>
     <a class="button button--primary site-header__cta" href="iletisim.html">Bize Ulaşın</a>
     <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-controls="primary-navigation" aria-expanded="false">
@@ -46,74 +53,51 @@
     <div class="container">
       <p class="eyebrow">THERA PILATES STÜDYOSU</p>
       <h1 class="studio-page__title">Stüdyomuz</h1>
-      <p class="studio-page__intro">THERA’nın kendi stüdyosundan gerçek görüntüler. Reformer alanı, manzara, stüdyo atmosferi ve THERA’ya ait görsel detayları bir araya getiriyoruz.</p>
+      <p class="studio-page__intro">THERA Pilates Stüdyosu’nun çalışma alanlarını, ekipmanlarını ve dinlenme bölümlerini kendi çekimlerimizle keşfedin.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
-      <div class="studio-page__opening">
-        <img src="assets/images/studio/studio-wide.webp"
-             alt="THERA Pilates Stüdyosu'nda reformer alanı ve manzara"
-             fetchpriority="high">
-      </div>
-
       <div class="studio-page__gallery" data-gallery>
-
-        <button class="studio-page__item studio-page__item--large"
-          type="button" data-gallery-item
-          data-full="assets/images/studio/studio-interior.webp"
-          aria-label="THERA stüdyo iç mekânını büyüt">
-          <img src="assets/images/studio/studio-interior.webp"
-               alt="THERA Pilates Stüdyosu iç mekânı" loading="lazy">
-          <span class="studio-page__caption">İç Mekân</span>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-01.jpeg" aria-label="THERA Pilates ekipman görselini büyüt">
+          <img src="assets/images/studio/new/studio-01.jpeg" alt="THERA stüdyosunda Cadillac reformer ekipmanı" fetchpriority="high">
         </button>
-
-        <button class="studio-page__item"
-          type="button" data-gallery-item
-          data-full="assets/images/studio/studio-landscape.webp"
-          aria-label="THERA stüdyo manzarasını büyüt">
-          <img src="assets/images/studio/studio-landscape.webp"
-               alt="THERA stüdyosundan manzara" loading="lazy">
-          <span class="studio-page__caption">Manzara</span>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-02.jpeg" aria-label="THERA stüdyosundaki reformer alanını büyüt">
+          <img src="assets/images/studio/new/studio-02.jpeg" alt="THERA Pilates yazısı ve reformer alanı" loading="lazy" decoding="async">
         </button>
-
-        <button class="studio-page__item"
-          type="button" data-gallery-item
-          data-full="assets/images/studio/studio-event.webp"
-          aria-label="THERA etkinlik fotoğrafını büyüt">
-          <img src="assets/images/studio/studio-event.webp"
-               alt="THERA Pilates Stüdyosu etkinlik görüntüsü" loading="lazy">
-          <span class="studio-page__caption">THERA’dan Bir An</span>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-04.jpeg" aria-label="THERA soyunma alanı görselini büyüt">
+          <img src="assets/images/studio/new/studio-04.jpeg" alt="THERA stüdyosunun kilitli dolap ve soyunma alanı" loading="lazy" decoding="async">
         </button>
-
-        <button class="studio-page__item studio-page__item--wide"
-          type="button" data-gallery-item
-          data-full="assets/images/studio/studio-control.webp"
-          aria-label="THERA Pilates kontrol görselini büyüt">
-          <img src="assets/images/studio/studio-control.webp"
-               alt="THERA Pilates reformer çalışması" loading="lazy">
-          <span class="studio-page__caption">Pilates’te Kontrol</span>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-05.jpeg" aria-label="THERA dinlenme alanı görselini büyüt">
+          <img src="assets/images/studio/new/studio-05.jpeg" alt="THERA stüdyosunun dinlenme ve bekleme alanı" loading="lazy" decoding="async">
         </button>
-
-        <button class="studio-page__item studio-page__item--wide"
-          type="button" data-gallery-item
-          data-full="assets/images/studio/studio-history.webp"
-          aria-label="Pilates tarihsel görselini büyüt">
-          <img src="assets/images/studio/studio-history.webp"
-               alt="Pilates tarihinden görsel" loading="lazy">
-          <span class="studio-page__caption">Pilates Tarihinden</span>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-06.jpeg" aria-label="THERA stüdyosunun genel görünümünü büyüt">
+          <img src="assets/images/studio/new/studio-06.jpeg" alt="THERA Pilates stüdyosunun genel görünümü" loading="lazy" decoding="async">
         </button>
-
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-07.jpeg" aria-label="THERA duş alanı görselini büyüt">
+          <img src="assets/images/studio/new/studio-07.jpeg" alt="THERA stüdyosunun duş alanı" loading="lazy" decoding="async">
+        </button>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-08.jpeg" aria-label="THERA lavabo ve tuvalet alanını büyüt">
+          <img src="assets/images/studio/new/studio-08.jpeg" alt="THERA stüdyosunun lavabo ve tuvalet alanı" loading="lazy" decoding="async">
+        </button>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-09.jpeg" aria-label="THERA bekleme alanı görselini büyüt">
+          <img src="assets/images/studio/new/studio-09.jpeg" alt="THERA stüdyosunun oturma ve bekleme alanı" loading="lazy" decoding="async">
+        </button>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-10.jpeg" aria-label="THERA Pilates salonunun görünümünü büyüt">
+          <img src="assets/images/studio/new/studio-10.jpeg" alt="THERA Pilates salonunda ekipman ve çalışma alanı" loading="lazy" decoding="async">
+        </button>
+        <button class="studio-page__item" type="button" data-gallery-item data-full="assets/images/studio/new/studio-11.jpeg" aria-label="THERA stüdyo girişini büyüt">
+          <img src="assets/images/studio/new/studio-11.jpeg" alt="THERA Pilates stüdyosunun giriş bölümü" loading="lazy" decoding="async">
+        </button>
       </div>
 
       <div class="studio-page__note">
         <p class="eyebrow">THERA</p>
         <h2>Hareket için sakin bir alan.</h2>
         <p>
-          THERA Pilates Stüdyosu’nun kendi görselleriyle oluşturulan bu galeri,
-          stüdyonun gerçek atmosferini ve çalışma alanını doğrudan gösterir.
+          Tüm görseller THERA stüdyosunda çekilmiştir; galeri üzerinden fotoğrafları büyüterek inceleyebilirsiniz.
         </p>
       </div>
 
@@ -127,7 +111,10 @@
     <div class="site-footer__main">
       <div>
         <a class="site-footer__logo" href="index.html" aria-label="THERA Pilates Stüdyosu ana sayfa">
-          <img src="assets/images/logo/thera-logo.png" alt="THERA Pilates Stüdyosu">
+          <span class="site-wordmark" aria-hidden="true">
+            <span class="site-wordmark__top">THERA</span>
+            <span class="site-wordmark__bottom">PILATES</span>
+          </span>
         </a>
         <p class="site-footer__tagline">
           Bedenini tanı. Hareketini keşfet.
@@ -142,6 +129,7 @@
           <a class="site-footer__link" href="hizmetler.html">Hizmetler</a>
           <a class="site-footer__link" href="kurucular.html">Kurucular</a>
           <a class="site-footer__link" href="studyomuz.html" aria-current="page">Stüdyomuz</a>
+          <a class="site-footer__link" href="belgelerimiz.html">Belgelerimiz</a>
           <a class="site-footer__link" href="iletisim.html">İletişim</a>
         </nav>
       </div>
@@ -152,7 +140,11 @@
           <a class="site-footer__link" href="tel:+905059183603">0505 918 36 03</a>
           <a class="site-footer__link" href="tel:+905558681795">0555 868 17 95</a>
           <span>Emir Beyazıt Mahallesi, 28. Sokak,<br>Muğla Life AVM, A Blok No: 6</span>
-          <span>08.30–22.00</span>
+          <div class="site-footer__hours" aria-label="Çalışma saatleri">
+            <span><strong>Hafta içi:</strong> 08.30–22.00</span>
+            <span><strong>Cumartesi:</strong> 09.00–15.00</span>
+            <span><strong>Pazar:</strong> Kapalı</span>
+          </div>
           <a class="site-footer__link" href="https://www.instagram.com/therapilatesmugla/" target="_blank" rel="noopener noreferrer">@therapilatesmugla</a>
         </div>
       </div>
