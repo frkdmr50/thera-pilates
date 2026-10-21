@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     render(currentIndex);
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("gallery-lightbox-open");
     close.focus();
   };
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lightbox.classList.remove("is-open");
     lightbox.setAttribute("aria-hidden", "true");
     image.src = "";
-    document.body.style.overflow = "";
+    document.body.classList.remove("gallery-lightbox-open");
     activeTrigger?.focus();
     activeTrigger = null;
   };
